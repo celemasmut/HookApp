@@ -1,14 +1,22 @@
-import React from 'react'
-import { useEffect } from 'react/cjs/react.development'
+import React, { useEffect, useState }  from 'react'
 
 export const Message = () => {
 
+    const [coords, setCoords] = useState({x: 0, y: 0})
+    const {x,y} = coords;
+
     useEffect(() => {
+
+        const mouseMove = (e)=>{
+            const coords = { x: e.x, y: e.y };
+            setCoords(coords);
+        }
         
-        console.log('componente montado');
+        window.addEventListener('mousemove', mouseMove);
+
 
         return () => {
-            console.log('componente desmontado'); // fase de limpieza
+            window.removeEventListener('mousemove',mouseMove); // fase de limpieza
 
         }
     }, [])
@@ -17,6 +25,10 @@ export const Message = () => {
     return (
         <>
         <h3>Tu la molas!</h3>
+        <p>
+            x: {x}
+            y: {y}
+        </p>
             
         </>
     )
