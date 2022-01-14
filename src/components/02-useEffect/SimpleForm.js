@@ -12,18 +12,22 @@ const SimpleForm = () => {
     //desestructurando formState
     const { name, email } = formState;
 
+    //efecto que reacciona a cuando se carga el componente por 1era vez
     useEffect( () => {
         //console.log('hey!')
     } , []);
 
+    //efecto que reacciona a cuando hay cambio en el formState
     useEffect( () => {
         //console.log('formState cambio!')
     } , [formState]);
 
+    //efecto que reacciona a cuando se cambia el email
     useEffect( () => {
         //console.log('email cambio!')
     } , [email]);
 
+    
     const handleInputChange  = ({ target }) =>{
         setFormState({
             ...formState,//mantengo el state
