@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { CallbackHook } from './components/06-memos/CallbackHook';
+//import { MemoHook } from './components/06-memos/MemoHook';
+//import { Memorize } from './components/06-memos/Memorize';
 //import { RealExampleRef } from './components/04-useRef/RealExampleRef';
-import { Layout } from './components/useLayOutEffect/Layout';
+//import { Layout } from './components/useLayOutEffect/Layout';
 //import { FocusScreen } from './components/04-useRef/FocusScreen';
 //import { MultipleCustomHooks } from './components/03-examples/MultipleCustomHooks';
 //import FormWithCustomHook from './components/02-useEffect/FormWithCustomHook';
@@ -11,6 +14,6 @@ import { Layout } from './components/useLayOutEffect/Layout';
 //import HookApp from './HookApp';
 
 ReactDOM.render(
-    < Layout />,
+    < CallbackHook />,
   document.getElementById('root')
 );
